@@ -1,0 +1,196 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Services Page — Apple HIG Modern Clean Design
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.wrapper {
+  padding-top: calc(var(--header-height) + var(--space-3xl));
+  padding-bottom: var(--space-5xl);
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.hero {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto var(--space-4xl);
+}
+
+.title {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Service Cards Grid ── */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-5xl);
+}
+
+@media (min-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.serviceCard {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.03);
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(27, 42, 74, 0.2);
+  box-shadow: 0 16px 36px -12px rgba(27, 42, 74, 0.08);
+}
+
+.serviceIconWrap {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, rgba(27, 42, 74, 0.06), rgba(16, 185, 129, 0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.serviceTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.serviceDesc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+  flex-grow: 1;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-xl) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.featureListItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.checkMark {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* ── Comparison Section ── */
+.comparisonCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-3xl);
+  margin-bottom: var(--space-5xl);
+  overflow-x: auto;
+}
+
+.comparisonTitle {
+  text-align: center;
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.comparisonSubtitle {
+  text-align: center;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3xl);
+}
+
+.comparisonTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.comparisonTable th,
+.comparisonTable td {
+  padding: var(--space-md) var(--space-lg);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.comparisonTable th {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.comparisonTable td {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.highlightCol {
+  background-color: rgba(16, 185, 129, 0.04);
+  font-weight: 600;
+  color: var(--color-primary) !important;
+}
+
+/* ── Bottom CTA ── */
+.ctaSection {
+  background: linear-gradient(135deg, var(--color-surface), rgba(16, 185, 129, 0.06));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-4xl) var(--space-2xl);
+  text-align: center;
+}
+
+.ctaHeading {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.ctaText {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  max-width: 580px;
+  margin: 0 auto var(--space-2xl);
+}
