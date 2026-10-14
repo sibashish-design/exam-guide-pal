@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./contact.module.css";
+import { whatsappLink, whatsappNumber } from "@/data/contact";
 
 export function ContactClient() {
   const [formData, setFormData] = useState({
@@ -65,6 +66,15 @@ export function ContactClient() {
               <div className={styles.channelList}>
                 <div className={styles.channelItem}>
                   <div className={styles.channelIcon}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M20 11.5a8.38 8.38 0 0 1-9 8.5 9.1 9.1 0 0 1-3.8-.9L3 20l1.1-3.7A8.5 8.5 0 1 1 20 11.5Z"/><path d="M8 9.2c.2 2.6 2.2 4.8 4.8 5.1l1.4-1.1 1.6.8c-.5 1.4-1.6 2-2.8 1.7-3.8-1-6.1-3.4-6.9-6.8-.3-1.2.4-2.2 1.7-2.7l.8 1.6Z"/></svg>
+                  </div>
+                  <div>
+                    <div className={styles.channelLabel}>WhatsApp Support</div>
+                    <a href={whatsappLink("Hi ExamGuidePal, I would like help choosing exam preparation support.")} target="_blank" rel="noreferrer" className={styles.channelValue}>{whatsappNumber}</a>
+                  </div>
+                </div>
+                <div className={styles.channelItem}>
+                  <div className={styles.channelIcon}>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                       <polyline points="22,6 12,13 2,6" />
@@ -107,6 +117,14 @@ export function ContactClient() {
                   </div>
                 </div>
               </div>
+              <a
+                href={whatsappLink("Hi ExamGuidePal, I would like help choosing exam preparation support.")}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.whatsappAction}
+              >
+                Chat on WhatsApp — {whatsappNumber}
+              </a>
             </div>
 
             {/* Quick FAQ Card */}
@@ -193,7 +211,7 @@ export function ContactClient() {
                     <input
                       id="phone"
                       type="tel"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+44 7700 900000"
                       className="form-input"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}

@@ -115,6 +115,22 @@
   color: var(--color-accent);
 }
 
+.whatsappAction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: var(--space-xl);
+  padding: .75rem 1rem;
+  border-radius: var(--radius-md);
+  background: #25D366;
+  color: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+}
+
+.whatsappAction:hover { color: #fff; background: #1dbd5a; }
+
 /* ── Quick FAQ Card ── */
 .faqCard {
   background: var(--color-surface);

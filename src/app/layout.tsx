@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { whatsappLink, whatsappNumber } from "@/data/contact";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -54,6 +55,16 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <a
+          className="whatsapp-float"
+          href={whatsappLink("Hi ExamGuidePal, I would like help choosing exam preparation support.")}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Chat with ExamGuidePal on WhatsApp"
+        >
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M20 11.5a8.38 8.38 0 0 1-9 8.5 9.1 9 0 0 1-3.8-.9L3 20l1.1-3.7A8.5 8.5 0 1 1 20 11.5Z"/><path d="M8 9.2c.2 2.6 2.2 4.8 4.8 5.1l1.4-1.1 1.6.8c-.5 1.4-1.6 2-2.8 1.7-3.8-1-6.1-3.4-6.9-6.8-.3-1.2.4-2.2 1.7-2.7l.8 1.6Z"/></svg>
+          <span>WhatsApp: {whatsappNumber}</span>
+        </a>
       </body>
     </html>
   );

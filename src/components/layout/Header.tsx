@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 import { categories } from "@/data/exams";
+import { whatsappLink, whatsappNumber } from "@/data/contact";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -180,6 +181,10 @@ export function Header() {
           Free Consultation →
         </Link>
 
+        <a href={whatsappLink("Hi ExamGuidePal, I would like help choosing exam preparation support.")} target="_blank" rel="noreferrer" className={styles.whatsappHeader}>
+          <span>WhatsApp</span> {whatsappNumber}
+        </a>
+
         <button
           className={styles.hamburger}
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -258,6 +263,11 @@ export function Header() {
                 )}
               </li>
             ))}
+            <li className={styles.mobileNavItem}>
+              <a href={whatsappLink("Hi ExamGuidePal, I would like help choosing exam preparation support.")} target="_blank" rel="noreferrer" className={`btn btn--outline ${styles.mobileCta}`}>
+                WhatsApp Us: {whatsappNumber}
+              </a>
+            </li>
             <li className={styles.mobileNavItem}>
               <Link
                 href="/consultation"
